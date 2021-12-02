@@ -11,6 +11,4 @@ public:
 	}
 };
 
-MikouMouk::Application* MikouMouk::createApplication() {
-	return new Sandbox();
-}
+MikouMouk::Application* MikouMouk::createApplication() { return new Sandbox(); }
