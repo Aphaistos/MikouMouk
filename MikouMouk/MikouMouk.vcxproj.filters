@@ -4,6 +4,9 @@
     <Filter Include="MikouMouk">
       <UniqueIdentifier>{862E801A-F298-3491-3BD7-E536A78012E6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MikouMouk\Events">
+      <UniqueIdentifier>{AA87AB94-9680-CAE6-BFB2-AF6BAB0AAAF2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MikouMouk.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\MikouMouk\EntryPoint.h">
       <Filter>MikouMouk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikouMouk\Events\ApplicationEvent.h">
+      <Filter>MikouMouk\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikouMouk\Events\Event.h">
+      <Filter>MikouMouk\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikouMouk\Events\KeyEvent.h">
+      <Filter>MikouMouk\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikouMouk\Events\MouseEvent.h">
+      <Filter>MikouMouk\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\MikouMouk\Log.h">
       <Filter>MikouMouk</Filter>

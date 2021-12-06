@@ -27,6 +27,7 @@ project "MikouMouk"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -74,8 +75,8 @@ project "Sandbox"
 
 	includedirs
 	{
-		"MikouMouk/vendor/spdlog/include",
-		"MikouMouk/src"
+		"MikouMouk/src",
+		"MikouMouk/vendor/spdlog/include"
 	}
 
 	links
