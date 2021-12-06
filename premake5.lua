@@ -19,6 +19,9 @@ project "MikouMouk"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "mkpch.h"
+	pchsource "MikouMouk/src/mkpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

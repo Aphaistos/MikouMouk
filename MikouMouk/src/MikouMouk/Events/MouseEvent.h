@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace MikouMouk {
 
 	class  MIKOUMOUK_API MouseMovedEvent : public Event {

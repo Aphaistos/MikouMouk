@@ -2,9 +2,6 @@
 
 #include "MikouMouk/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace MikouMouk {
 
 	enum class EventType {
