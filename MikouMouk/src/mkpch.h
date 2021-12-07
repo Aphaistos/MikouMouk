@@ -9,6 +9,8 @@
 #include <sstream>
 #include <vector>
 
+#include "MikouMouk/Log.h"
+
 #ifdef MK_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

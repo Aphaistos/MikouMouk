@@ -1,13 +1,13 @@
 #include "mkpch.h"
 #include "Application.h"
 
-#include "Events/Event.h"
-#include "Events/ApplicationEvent.h"
-#include "Log.h"
+#include "MikouMouk/Events/ApplicationEvent.h"*
+
+#include <GLFW/glfw3.h>
 
 namespace MikouMouk {
 	Application::Application() {
-
+		m_Window = std::unique_ptr<Window>(Window::create());
 	}
 
 	Application::~Application() {
@@ -15,14 +15,11 @@ namespace MikouMouk {
 	}
 
 	void Application::run() {
-		WindowResizeEvent e(1280, 720);
-		if (e.isInCategory(EventCategoryApplication)) {
-			MK_TRACE(e);
-		}
-		if (e.isInCategory(EventCategoryInput)) {
-			MK_TRACE(e);
-		}
 
-		while (true);
+		while (m_Running) {
+			glClearColor(0, 1, 0, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->onUpdate();
+		}
 	}
 }
