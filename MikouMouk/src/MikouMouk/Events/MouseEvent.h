@@ -14,7 +14,7 @@ namespace MikouMouk {
 
 		std::string toString() const override {
 			std::stringstream ss;
-			ss << "MouseMovedEvent" << m_MouseX << ", " << m_MouseY;
+			ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
 			return ss.str();
 		}
 
@@ -35,7 +35,7 @@ namespace MikouMouk {
 
 		std::string toString() const override {
 			std::stringstream ss;
-			ss << "MouseMovedEvent" << m_XOffset << ", " << m_YOffset;
+			ss << "MouseScrolledEvent: " << m_XOffset << ", " << m_YOffset;
 			return ss.str();
 		}
 

@@ -2,6 +2,8 @@
 
 #include "Event.h"
 
+#include <sstream>
+
 namespace MikouMouk {
 
 	class MIKOUMOUK_API WindowResizeEvent : public Event {
