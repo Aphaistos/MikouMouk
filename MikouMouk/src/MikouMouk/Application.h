@@ -15,11 +15,16 @@ namespace MikouMouk {
 		void run();
 
 		void onEvent(Event& e);
+
+		inline Window& getWindow() { return *m_Window; }
+
+		inline static Application& get() { return *s_Instance; }
 	private:
 		bool onWindowClosed(WindowCloseEvent& event);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		static Application* s_Instance;
 	};
 
 	Application* createApplication();

@@ -167,14 +167,17 @@
     <ClInclude Include="src\MikouMouk\Events\Event.h" />
     <ClInclude Include="src\MikouMouk\Events\KeyEvent.h" />
     <ClInclude Include="src\MikouMouk\Events\MouseEvent.h" />
+    <ClInclude Include="src\MikouMouk\Input.h" />
     <ClInclude Include="src\MikouMouk\Log.h" />
     <ClInclude Include="src\MikouMouk\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MikouMouk\Application.cpp" />
     <ClCompile Include="src\MikouMouk\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mkpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
