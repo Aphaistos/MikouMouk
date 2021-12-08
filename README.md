@@ -1,6 +1,6 @@
 # MikouMouk
 
-MikouMouk is a game that I made for fun.
+MikouMouk is a game I make for fun
 
 # How to use in Visual Studio
 
