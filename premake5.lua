@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "MikouMouk/vendor/GLFW/include"
+IncludeDir["Glad"] = "MikouMouk/vendor/Glad/include"
 
 include "MikouMouk/vendor/GLFW"
+include "MikouMouk/vendor/Glad"
 
 project "MikouMouk"
 	location "MikouMouk"
@@ -36,12 +38,14 @@ project "MikouMouk"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
-	links 
+	links
 	{
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "MikouMouk"
 		defines
 		{
 			"MK_PLATFORM_WINDOWS",
-			"MK_BUILD_DLL"
+			"MK_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

@@ -5,6 +5,9 @@
 #include "MikouMouk/Events/MouseEvent.h"
 #include "MikouMouk/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+
+
 namespace MikouMouk {
 
 	static bool s_GLFWInitialzed = false;
@@ -34,13 +37,15 @@ namespace MikouMouk {
 
 		if (!s_GLFWInitialzed) {
 			int succes = glfwInit();
-			MK_CORE_ASSERT("succes", "Could not initialize GLFW!");
+			MK_CORE_ASSERT(succes, "Could not initialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialzed = true;
 		}
 
 		m_Window = glfwCreateWindow((int)props.width, (int)props.height, m_Data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		MK_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		setVSync(true);
 

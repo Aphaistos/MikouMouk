@@ -1,7 +1,7 @@
 #include "mkpch.h"
 #include "Application.h"
  
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace MikouMouk {
 
@@ -10,6 +10,9 @@ namespace MikouMouk {
 	Application::Application() {
 		m_Window = std::unique_ptr<Window>(Window::create());
 		m_Window->setEventCallback(BIND_EVENT_FN(onEvent));
+
+		unsigned int id;
+		glGenVertexArrays(1, &id);
 	}
 
 	Application::~Application() {
